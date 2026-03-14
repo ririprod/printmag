@@ -1,0 +1,1634 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- ╔══════════════════════════════════════════
+       SEO — Основні мета-теги
+  ═══════════════════════════════════════════╗ -->
+  <title>PrintMag — Фотодрук в Україні | Футболки, Кружки, Альбоми</title>
+  <meta name="description" content="PrintMag — сервіс якісного фотодруку в Україні. Друкуємо на футболках, кружках, пазлах та фотоальбомах. Доставка по всій Україні за 1–3 дні. Замовляйте онлайн!">
+  <meta name="keywords" content="фотодрук, друк на футболці, друк на кружці, фотоальбом, пазли з фото, подарунки з фото, PrintMag, фотодрук Україна">
+  <meta name="author" content="PrintMag">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://printmag.ua/">
+
+  <!-- ╔══════════════════════════════════════════
+       SEO — Open Graph (Facebook / Telegram)
+  ═══════════════════════════════════════════╗ -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://printmag.ua/">
+  <meta property="og:title" content="PrintMag — Фотодрук в Україні">
+  <meta property="og:description" content="Друкуємо ваші фото на футболках, кружках, пазлах і альбомах. Швидка доставка по Україні!">
+  <meta property="og:image" content="https://printmag.ua/img/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:locale" content="uk_UA">
+  <meta property="og:site_name" content="PrintMag">
+
+  <!-- ╔══════════════════════════════════════════
+       SEO — Twitter Card
+  ═══════════════════════════════════════════╗ -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="PrintMag — Фотодрук в Україні">
+  <meta name="twitter:description" content="Друкуємо ваші фото на футболках, кружках, пазлах і альбомах.">
+  <meta name="twitter:image" content="https://printmag.ua/img/og-image.jpg">
+
+  <!-- ╔══════════════════════════════════════════
+       SEO — Schema.org (JSON-LD)
+  ═══════════════════════════════════════════╗ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "PrintMag",
+    "description": "Сервіс якісного фотодруку в Україні. Футболки, кружки, пазли, фотоальбоми.",
+    "url": "https://printmag.ua",
+    "telephone": "+380686885898",
+    "email": "info@printmag.ua",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Дніпро",
+      "addressCountry": "UA"
+    },
+    "openingHours": "Mo-Fr 09:00-18:00",
+    "priceRange": "₴₴",
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.9",
+      "reviewCount": "2400"
+    }
+  }
+  </script>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="./img/favicon.png">
+  <link rel="apple-touch-icon" href="./img/apple-touch-icon.png">
+
+  <!-- Шрифти -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Outfit:wght@300;400;500;600&display=swap"
+    rel="stylesheet"
+  >
+
+  <style>
+
+    /* ================================================
+       ЗМІННІ
+    ================================================ */
+
+    :root {
+      --white  : #f8f9fc;
+      --ink    : #0e1525;
+      --blue   : #2756cc;
+      --blue2  : #1a3d99;
+      --sky    : #e8edf8;
+      --line   : #d5dcea;
+      --muted  : #6b7a9a;
+      --gold   : #f5a623;
+
+      /* Відступи секцій — адаптивні */
+      --section-py : clamp(56px, 8vw, 96px);
+    }
+
+    /* ================================================
+       RESET
+    ================================================ */
+
+    *,
+    *::before,
+    *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      -webkit-text-size-adjust: 100%;
+    }
+
+    body {
+      font-family: 'Outfit', sans-serif;
+      background: var(--white);
+      color: var(--ink);
+      overflow-x: hidden;
+      line-height: 1.6;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    /* ================================================
+       КОНТЕЙНЕР
+    ================================================ */
+
+    .container {
+      width: 100%;
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 clamp(16px, 4vw, 40px);
+    }
+
+    /* ================================================
+       НАВІГАЦІЯ
+    ================================================ */
+
+    .nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      height: 68px;
+      border-bottom: 1px solid var(--line);
+      background: rgba(248, 249, 252, 0.97);
+      backdrop-filter: blur(14px);
+    }
+
+    .nav .container {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    /* Лого */
+
+    .nav__logo {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+      flex-shrink: 0;
+    }
+
+    .nav__logo img {
+      height: 40px;
+      width: auto;
+      object-fit: contain;
+    }
+
+    /* Посилання */
+
+    .nav__links {
+      display: flex;
+      align-items: center;
+      gap: clamp(16px, 2.5vw, 36px);
+    }
+
+    .nav__links a {
+      color: var(--ink);
+      font-size: 13px;
+      font-weight: 400;
+      text-decoration: none;
+      opacity: 0.55;
+      white-space: nowrap;
+      transition: opacity 0.2s;
+    }
+
+    .nav__links a:hover {
+      opacity: 1;
+    }
+
+    /* Права частина */
+
+    .nav__right {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-shrink: 0;
+    }
+
+    .nav__phone {
+      margin-right: 8px;
+      color: var(--blue);
+      font-size: 13px;
+      font-weight: 500;
+      white-space: nowrap;
+    }
+
+    .nav__account {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      height: 36px;
+      padding: 0 16px;
+      background: var(--sky);
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      color: var(--ink);
+      font-size: 13px;
+      font-weight: 500;
+      text-decoration: none;
+      white-space: nowrap;
+      transition: all 0.2s;
+    }
+
+    .nav__account:hover {
+      background: var(--line);
+      border-color: var(--blue);
+      color: var(--blue);
+    }
+
+    .nav__account svg {
+      width: 15px;
+      height: 15px;
+      stroke: currentColor;
+      fill: none;
+      stroke-width: 1.8;
+      flex-shrink: 0;
+    }
+
+    .nav__btn {
+      height: 36px;
+      padding: 0 22px;
+      background: var(--blue);
+      border: none;
+      border-radius: 6px;
+      color: #fff;
+      font-family: 'Outfit', sans-serif;
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      cursor: pointer;
+      white-space: nowrap;
+      transition: background 0.2s;
+    }
+
+    .nav__btn:hover {
+      background: var(--blue2);
+    }
+
+    /* Бургер — тільки мобільний */
+
+    .nav__burger {
+      display: none;
+      flex-direction: column;
+      justify-content: center;
+      gap: 5px;
+      width: 36px;
+      height: 36px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 4px;
+    }
+
+    .nav__burger span {
+      display: block;
+      width: 100%;
+      height: 2px;
+      background: var(--ink);
+      border-radius: 2px;
+      transition: all 0.25s;
+    }
+
+    /* ================================================
+       HERO
+    ================================================ */
+
+    .hero {
+      overflow: hidden;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .hero .container {
+      display: grid;
+      grid-template-columns: 55% 45%;
+      /* Фіксована висота — фото не виходять за межі секції */
+      height: clamp(480px, 88vh, 760px);
+      max-height: 760px;
+      overflow: hidden;
+    }
+
+    /* Ліва колонка */
+
+    .hero__left {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding-top: clamp(40px, 6vw, 80px);
+      padding-bottom: clamp(40px, 6vw, 80px);
+      padding-right: clamp(24px, 4vw, 60px);
+      border-right: 1px solid var(--line);
+    }
+
+    .hero__tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: clamp(24px, 4vw, 48px);
+      color: var(--blue);
+      font-size: 10px;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+    }
+
+    .hero__tag::before {
+      content: '';
+      width: 32px;
+      height: 1px;
+      background: var(--blue);
+      flex-shrink: 0;
+    }
+
+    .hero__title {
+      margin-bottom: clamp(24px, 3vw, 40px);
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(42px, 5.5vw, 88px);
+      font-weight: 300;
+      line-height: 1;
+      letter-spacing: -0.01em;
+    }
+
+    .hero__title em {
+      font-style: italic;
+      color: var(--blue);
+    }
+
+    .hero__divider {
+      width: 48px;
+      height: 2px;
+      margin-bottom: clamp(20px, 2.5vw, 32px);
+      background: var(--blue);
+      border-radius: 2px;
+    }
+
+    .hero__desc {
+      max-width: 400px;
+      margin-bottom: clamp(32px, 4vw, 52px);
+      color: var(--muted);
+      font-size: clamp(14px, 1.2vw, 16px);
+      font-weight: 300;
+      line-height: 1.9;
+    }
+
+    .hero__actions {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    /* Права колонка — строго обрізана висотою контейнера */
+
+    .hero__right {
+      display: grid;
+      grid-template-rows: 62% 38%;
+      overflow: hidden;
+      min-height: 0;   /* грід-fix: дозволяє дочірнім елементам стискатись */
+    }
+
+    .hero__img {
+      min-height: 0;
+    }
+
+    .hero__img-row {
+      min-height: 0;
+    }
+
+    .hero__img-small {
+      min-height: 0;
+    }
+
+    .hero__img {
+      overflow: hidden;
+      background: var(--sky);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .hero__img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+
+    .hero__img-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      overflow: hidden;
+    }
+
+    .hero__img-small {
+      overflow: hidden;
+      background: var(--sky);
+    }
+
+    .hero__img-small:first-child {
+      border-right: 1px solid var(--line);
+    }
+
+    .hero__img-small img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+
+    /* ================================================
+       КНОПКИ
+    ================================================ */
+
+    .btn-primary {
+      position: relative;
+      overflow: hidden;
+      align-self: flex-start;
+      padding: clamp(14px, 1.5vw, 17px) clamp(32px, 4vw, 52px);
+      background: var(--blue);
+      border: none;
+      border-radius: 6px;
+      color: #fff;
+      font-family: 'Outfit', sans-serif;
+      font-size: clamp(11px, 1vw, 13px);
+      font-weight: 500;
+      letter-spacing: 0.13em;
+      text-transform: uppercase;
+      cursor: pointer;
+    }
+
+    .btn-primary::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+      background: var(--blue2);
+      transform: translateX(-100%);
+      transition: transform 0.3s;
+    }
+
+    .btn-primary span {
+      position: relative;
+      z-index: 1;
+    }
+
+    .btn-primary:hover::after {
+      transform: translateX(0);
+    }
+
+    .btn-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      align-self: flex-start;
+      color: var(--blue);
+      font-size: 13px;
+      text-decoration: none;
+      transition: gap 0.25s;
+    }
+
+    .btn-link:hover {
+      gap: 16px;
+    }
+
+    /* ================================================
+       ЛІЧИЛЬНИКИ
+    ================================================ */
+
+    .numbers {
+      border-bottom: 1px solid var(--line);
+    }
+
+    .numbers .container {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    .numbers__item {
+      padding: clamp(24px, 3vw, 40px) 20px;
+      border-right: 1px solid var(--line);
+      text-align: center;
+    }
+
+    .numbers__item:last-child {
+      border-right: none;
+    }
+
+    .numbers__val {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(36px, 4vw, 48px);
+      font-weight: 300;
+      line-height: 1;
+      color: var(--blue);
+    }
+
+    .numbers__label {
+      margin-top: 8px;
+      color: var(--muted);
+      font-size: clamp(10px, 1vw, 11px);
+      letter-spacing: 0.13em;
+      text-transform: uppercase;
+    }
+
+    /* ================================================
+       ЗАГАЛЬНІ ЕЛЕМЕНТИ СЕКЦІЙ
+    ================================================ */
+
+    .section-head {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      margin-bottom: clamp(32px, 4vw, 52px);
+    }
+
+    .section-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(28px, 3.5vw, 42px);
+      font-weight: 300;
+    }
+
+    .section-title em {
+      font-style: italic;
+      color: var(--blue);
+    }
+
+    .section-link {
+      padding-bottom: 3px;
+      border-bottom: 1px solid var(--line);
+      color: var(--ink);
+      font-size: 12px;
+      letter-spacing: 0.12em;
+      text-decoration: none;
+      text-transform: uppercase;
+      white-space: nowrap;
+      transition: all 0.2s;
+    }
+
+    .section-link:hover {
+      border-color: var(--blue);
+      color: var(--blue);
+    }
+
+    /* ================================================
+       ПРОДУКТИ
+    ================================================ */
+
+    .products {
+      padding: var(--section-py) 0;
+    }
+
+    .products__grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: clamp(12px, 2vw, 20px);
+    }
+
+    .product-card {
+      cursor: pointer;
+    }
+
+    .product-card__img {
+      position: relative;
+      overflow: hidden;
+      aspect-ratio: 3 / 4;
+      margin-bottom: 14px;
+      background: var(--sky);
+      border: 1px solid transparent;
+      border-radius: 6px;
+      transition: border-color 0.25s;
+    }
+
+    .product-card:hover .product-card__img {
+      border-color: var(--blue);
+    }
+
+    .product-card__img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .product-card__img::after {
+      content: 'Замовити';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 13px;
+      background: var(--blue);
+      color: #fff;
+      font-size: 11px;
+      letter-spacing: 0.14em;
+      text-align: center;
+      text-transform: uppercase;
+      opacity: 0;
+      transition: opacity 0.25s;
+    }
+
+    .product-card:hover .product-card__img::after {
+      opacity: 1;
+    }
+
+    .product-card__name {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(17px, 1.5vw, 20px);
+      font-weight: 400;
+      margin-bottom: 4px;
+    }
+
+    .product-card__price {
+      color: var(--blue);
+      font-size: 13px;
+      font-weight: 500;
+    }
+
+    /* ================================================
+       ЯК МИ ПРАЦЮЄМО
+    ================================================ */
+
+    .process {
+      padding: var(--section-py) 0;
+      background: var(--sky);
+    }
+
+    .process__header {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      margin-bottom: clamp(32px, 4vw, 60px);
+    }
+
+    .process__subtitle {
+      max-width: 280px;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.7;
+      text-align: right;
+    }
+
+    .process__grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1px;
+      overflow: hidden;
+      background: var(--line);
+      border-radius: 6px;
+    }
+
+    .process__step {
+      padding: clamp(28px, 4vw, 48px) clamp(20px, 3vw, 40px);
+      background: var(--sky);
+      transition: background 0.2s;
+    }
+
+    .process__step:hover {
+      background: #dde4f4;
+    }
+
+    .process__step-num {
+      margin-bottom: 20px;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(48px, 5vw, 68px);
+      font-weight: 300;
+      line-height: 1;
+      color: var(--line);
+    }
+
+    .process__step-title {
+      margin-bottom: 12px;
+      font-size: clamp(15px, 1.4vw, 17px);
+      font-weight: 500;
+    }
+
+    .process__step-desc {
+      color: var(--muted);
+      font-size: clamp(13px, 1.1vw, 14px);
+      font-weight: 300;
+      line-height: 1.8;
+    }
+
+    /* ================================================
+       ВІДГУКИ
+    ================================================ */
+
+    .reviews {
+      padding: var(--section-py) 0;
+      border-top: 1px solid var(--line);
+    }
+
+    .reviews__header {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      margin-bottom: clamp(32px, 4vw, 52px);
+    }
+
+    .reviews__score {
+      text-align: right;
+    }
+
+    .reviews__score-val {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(40px, 5vw, 56px);
+      font-weight: 300;
+      line-height: 1;
+      color: var(--blue);
+    }
+
+    .reviews__score-stars {
+      margin-top: 2px;
+      color: var(--gold);
+      font-size: 16px;
+      letter-spacing: 3px;
+    }
+
+    .reviews__score-count {
+      margin-top: 4px;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .reviews__grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: clamp(12px, 2vw, 20px);
+    }
+
+    .review-card {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+      padding: clamp(20px, 2.5vw, 32px) clamp(16px, 2vw, 28px);
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      transition: all 0.25s;
+    }
+
+    .review-card:hover {
+      border-color: var(--blue);
+      box-shadow: 0 8px 32px rgba(39, 86, 204, 0.07);
+    }
+
+    .review-card__stars {
+      color: var(--gold);
+      font-size: 15px;
+      letter-spacing: 2px;
+    }
+
+    .review-card__text {
+      flex: 1;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(16px, 1.4vw, 18px);
+      font-style: italic;
+      font-weight: 300;
+      line-height: 1.6;
+      color: var(--ink);
+    }
+
+    .review-card__footer {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding-top: 16px;
+      border-top: 1px solid var(--line);
+    }
+
+    .review-card__avatar {
+      flex-shrink: 0;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      overflow: hidden;
+      background: var(--blue);
+    }
+
+    .review-card__avatar img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .review-card__name {
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 1.2;
+    }
+
+    .review-card__city {
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .review-card__verified {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      margin-left: auto;
+      color: var(--blue);
+      font-size: 11px;
+      white-space: nowrap;
+    }
+
+    .review-card__verified svg {
+      width: 13px;
+      height: 13px;
+      stroke: var(--blue);
+      fill: none;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    /* ================================================
+       ФУТЕР
+    ================================================ */
+
+    .footer {
+      background: var(--ink);
+      color: rgba(248, 249, 252, 0.6);
+    }
+
+    .footer__top {
+      padding: clamp(40px, 6vw, 64px) 0 clamp(32px, 5vw, 56px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+    }
+
+    .footer__top .container {
+      display: grid;
+      grid-template-columns: 1.6fr 1fr 1fr 1fr;
+      gap: clamp(24px, 4vw, 56px);
+    }
+
+    /* Бренд-колонка */
+
+    .footer__brand-logo {
+      margin-bottom: 20px;
+    }
+
+    .footer__brand-logo img {
+      height: 36px;
+      width: auto;
+      object-fit: contain;
+    }
+
+    .footer__brand-desc {
+      max-width: 240px;
+      margin-bottom: 24px;
+      font-size: 13px;
+      line-height: 1.8;
+    }
+
+    .footer__contact {
+      margin-bottom: 12px;
+    }
+
+    .footer__contact-label {
+      display: block;
+      margin-bottom: 2px;
+      color: rgba(255, 255, 255, 0.3);
+      font-size: 10px;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+    }
+
+    .footer__contact-val {
+      color: #fff;
+      font-size: 14px;
+      font-weight: 500;
+    }
+
+    .footer__socials {
+      display: flex;
+      gap: 8px;
+      margin-top: 24px;
+    }
+
+    .footer__social {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 34px;
+      height: 34px;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 6px;
+      color: rgba(248, 249, 252, 0.5);
+      text-decoration: none;
+      transition: all 0.2s;
+    }
+
+    .footer__social:hover {
+      background: var(--blue);
+      border-color: var(--blue);
+      color: #fff;
+    }
+
+    .footer__social svg {
+      width: 15px;
+      height: 15px;
+      fill: currentColor;
+    }
+
+    /* Навігаційні колонки */
+
+    .footer__col-title {
+      margin-bottom: 20px;
+      color: #fff;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+    }
+
+    .footer__col-links {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .footer__col-links a {
+      color: rgba(248, 249, 252, 0.45);
+      font-size: 13px;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .footer__col-links a:hover {
+      color: #fff;
+    }
+
+    /* Нижня смужка */
+
+    .footer__bottom {
+      padding: 20px 0;
+    }
+
+    .footer__bottom .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .footer__copy {
+      color: rgba(248, 249, 252, 0.28);
+      font-size: 12px;
+    }
+
+    .footer__bottom-links {
+      display: flex;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+
+    .footer__bottom-links a {
+      color: rgba(248, 249, 252, 0.28);
+      font-size: 12px;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .footer__bottom-links a:hover {
+      color: rgba(248, 249, 252, 0.65);
+    }
+
+    /* ================================================
+       МЕДІА ЗАПИТИ
+    ================================================ */
+
+    /* ── Планшет ≤ 1024px ── */
+    @media (max-width: 1024px) {
+
+      /* Навігація — прибираємо телефон і деякі пункти */
+      .nav__phone {
+        display: none;
+      }
+
+      .nav__links {
+        gap: 20px;
+      }
+
+      /* Hero — рівні колонки */
+      .hero .container {
+        grid-template-columns: 1fr 1fr;
+        height: clamp(420px, 75vh, 640px);
+      }
+
+      /* Продукти — 2 колонки */
+      .products__grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      /* Футер — 2 колонки */
+      .footer__top .container {
+        grid-template-columns: 1fr 1fr;
+        gap: 32px;
+      }
+
+      .footer__brand-desc {
+        max-width: 100%;
+      }
+
+    }
+
+    /* ── Мобільний ≤ 768px ── */
+    @media (max-width: 768px) {
+
+      /* Навігація */
+      .nav__links,
+      .nav__account,
+      .nav__btn {
+        display: none;
+      }
+
+      .nav__burger {
+        display: flex;
+      }
+
+      /* Hero — одна колонка */
+      .hero .container {
+        grid-template-columns: 1fr;
+        height: auto;
+      }
+
+      .hero__left {
+        padding: 48px 0 40px;
+        border-right: none;
+        border-bottom: 1px solid var(--line);
+      }
+
+      /* Права колонка hero — фіксована висота на мобільному */
+      .hero__right {
+        height: clamp(280px, 60vw, 400px);
+        grid-template-rows: 60% 40%;
+      }
+
+      /* Лічильники — 2 колонки */
+      .numbers .container {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .numbers__item:nth-child(2) {
+        border-right: none;
+      }
+
+      .numbers__item:nth-child(3) {
+        border-top: 1px solid var(--line);
+      }
+
+      .numbers__item:nth-child(4) {
+        border-top: 1px solid var(--line);
+        border-right: none;
+      }
+
+      /* Заголовки секцій */
+      .section-head {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+      }
+
+      /* Продукти — 2 колонки */
+      .products__grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+      }
+
+      /* Процес — 1 колонка */
+      .process__header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+      }
+
+      .process__subtitle {
+        text-align: left;
+        max-width: 100%;
+      }
+
+      .process__grid {
+        grid-template-columns: 1fr;
+      }
+
+      /* Відгуки — 1 колонка */
+      .reviews__header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+      }
+
+      .reviews__score {
+        text-align: left;
+      }
+
+      .reviews__grid {
+        grid-template-columns: 1fr;
+      }
+
+      /* Футер — 1 колонка */
+      .footer__top .container {
+        grid-template-columns: 1fr;
+        gap: 32px;
+      }
+
+      .footer__bottom .container {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+    }
+
+    /* ── Маленький мобільний ≤ 480px ── */
+    @media (max-width: 480px) {
+
+      /* Продукти — 1 колонка */
+      .products__grid {
+        grid-template-columns: 1fr;
+      }
+
+      /* Hero права частина — трохи менша */
+      .hero__right {
+        height: clamp(220px, 55vw, 320px);
+      }
+
+    }
+
+  </style>
+</head>
+<body>
+
+
+  <!-- ================================================
+       НАВІГАЦІЯ
+  ================================================ -->
+
+  <header class="nav" role="banner">
+    <div class="container">
+
+      <a href="/" class="nav__logo" aria-label="PrintMag — головна сторінка">
+        <!-- Замінити src на свій файл -->
+        <img src="./img/logo.png" alt="PrintMag логотип" width="120" height="40">
+      </a>
+
+      <nav aria-label="Головне меню">
+        <ul class="nav__links">
+          <li><a href="/prices">Ціни</a></li>
+          <li><a href="/delivery">Доставка</a></li>
+          <li><a href="/products">Продукти</a></li>
+          <li><a href="/faq">FAQ</a></li>
+          <li><a href="/contacts">Контакти</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav__right">
+        <span class="nav__phone">(068) 688-58-98</span>
+        <a href="/account" class="nav__account" aria-label="Особистий кабінет">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <circle cx="12" cy="8" r="4"/>
+            <path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/>
+          </svg>
+          Мій акаунт
+        </a>
+        <button class="nav__btn" onclick="location.href='/order'">
+          Замовити
+        </button>
+        <button class="nav__burger" aria-label="Відкрити меню" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+
+  <!-- ================================================
+       HERO
+  ================================================ -->
+
+  <section class="hero" aria-label="Головний банер">
+    <div class="container">
+
+      <!-- Ліва колонка -->
+      <div class="hero__left">
+
+        <span class="hero__tag" aria-hidden="true">Фотодрук в Україні</span>
+
+        <h1 class="hero__title">
+          Спогади,<br>
+          <em>вічні</em><br>
+          у деталях
+        </h1>
+
+        <div class="hero__divider" aria-hidden="true"></div>
+
+        <p class="hero__desc">
+          Перетворюємо ваші улюблені фотографії на якісні вироби
+          з тривалим строком служби. Футболки, кружки, пазли,
+          фотоальбоми — з любов'ю та майстерністю.
+        </p>
+
+        <div class="hero__actions">
+          <button class="btn-primary" onclick="location.href='/order'">
+            <span>Розпочати проєкт</span>
+          </button>
+          <a href="/products" class="btn-link">Переглянути колекцію →</a>
+        </div>
+
+      </div>
+
+      <!-- Права колонка — три фіксованих фото -->
+      <div class="hero__right">
+
+        <!-- Головне фото: замінити src -->
+        <div class="hero__img">
+          <img
+            src="./img/hero/hero-2.jpg"
+            alt="Якісний фотодрук на продуктах PrintMag"
+            loading="eager"
+            fetchpriority="high"
+          >
+        </div>
+
+        <div class="hero__img-row">
+
+          <!-- Фото 2: замінити src -->
+          <div class="hero__img-small">
+            <img
+              src="./img/hero/hero-1.jpg"
+              alt="Друк на футболці"
+              loading="lazy"
+            >
+          </div>
+
+          <!-- Фото 3: замінити src -->
+          <div class="hero__img-small">
+            <img
+              src="./img/hero/hero-3.jpg"
+              alt="Друк на кружці"
+              loading="lazy"
+            >
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ================================================
+       ЛІЧИЛЬНИКИ
+  ================================================ -->
+
+  <section class="numbers" aria-label="Наші досягнення">
+    <div class="container">
+
+      <div class="numbers__item">
+        <div class="numbers__val">10K+</div>
+        <div class="numbers__label">Замовлень виконано</div>
+      </div>
+
+      <div class="numbers__item">
+        <div class="numbers__val">4.9</div>
+        <div class="numbers__label">Середня оцінка</div>
+      </div>
+
+      <div class="numbers__item">
+        <div class="numbers__val">1–3</div>
+        <div class="numbers__label">Дні доставки</div>
+      </div>
+
+      <div class="numbers__item">
+        <div class="numbers__val">5+</div>
+        <div class="numbers__label">Років на ринку</div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ================================================
+       ПРОДУКТИ
+  ================================================ -->
+
+  <section class="products" aria-labelledby="products-title">
+    <div class="container">
+
+      <div class="section-head">
+        <h2 class="section-title" id="products-title">Наша <em>колекція</em></h2>
+        <a href="/products" class="section-link">Переглянути всі →</a>
+      </div>
+
+      <div class="products__grid">
+
+        <!-- Продукт 1: замінити src -->
+        <article class="product-card">
+          <div class="product-card__img">
+            <img src="./img/hero/hero-1.jpg" alt="Друк на футболці" loading="lazy" width="320" height="427">
+          </div>
+          <h3 class="product-card__name">Футболки</h3>
+          <div class="product-card__price">від 299 грн</div>
+        </article>
+
+        <!-- Продукт 2: замінити src -->
+        <article class="product-card">
+          <div class="product-card__img">
+            <img src="./img/hero/hero-3.jpg" alt="Друк на кружці" loading="lazy" width="320" height="427">
+          </div>
+          <h3 class="product-card__name">Кружки</h3>
+          <div class="product-card__price">від 199 грн</div>
+        </article>
+
+        <!-- Продукт 3: замінити src -->
+        <article class="product-card">
+          <div class="product-card__img">
+            <img src="./img/products/puzzle.jpg" alt="Фотопазл" loading="lazy" width="320" height="427">
+          </div>
+          <h3 class="product-card__name">Пазли</h3>
+          <div class="product-card__price">від 249 грн</div>
+        </article>
+
+        <!-- Продукт 4: замінити src -->
+        <article class="product-card">
+          <div class="product-card__img">
+            <img src="./img/products/photoalb.jpg" alt="Фотоальбом на замовлення" loading="lazy" width="320" height="427">
+          </div>
+          <h3 class="product-card__name">Фотоальбоми</h3>
+          <div class="product-card__price">від 399 грн</div>
+        </article>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ================================================
+       ЯК МИ ПРАЦЮЄМО
+  ================================================ -->
+
+  <section class="process" aria-labelledby="process-title">
+    <div class="container">
+
+      <div class="process__header">
+        <h2 class="section-title" id="process-title">Як ми <em>працюємо</em></h2>
+        <p class="process__subtitle">
+          Простий процес від ідеї до готового виробу у ваших руках
+        </p>
+      </div>
+
+      <div class="process__grid">
+
+        <div class="process__step">
+          <div class="process__step-num" aria-hidden="true">I</div>
+          <h3 class="process__step-title">Завантажте фото</h3>
+          <p class="process__step-desc">
+            Оберіть продукт і завантажте ваше фото у зручному форматі.
+            Підтримуємо JPG, PNG, PDF у високій роздільній здатності.
+          </p>
+        </div>
+
+        <div class="process__step">
+          <div class="process__step-num" aria-hidden="true">II</div>
+          <h3 class="process__step-title">Налаштуйте дизайн</h3>
+          <p class="process__step-desc">
+            Скористайтесь онлайн-редактором для коригування, додавання
+            тексту або фільтрів. Наші дизайнери готові допомогти.
+          </p>
+        </div>
+
+        <div class="process__step">
+          <div class="process__step-num" aria-hidden="true">III</div>
+          <h3 class="process__step-title">Отримайте замовлення</h3>
+          <p class="process__step-desc">
+            Надрукуємо та доставимо по всій Україні за 1–3 робочих дні.
+            Гарантія якості на кожен виріб.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ================================================
+       ВІДГУКИ
+  ================================================ -->
+
+  <section class="reviews" aria-labelledby="reviews-title">
+    <div class="container">
+
+      <div class="reviews__header">
+        <h2 class="section-title" id="reviews-title">Відгуки <em>клієнтів</em></h2>
+        <div class="reviews__score" aria-label="Рейтинг 4.9 з 5">
+          <div class="reviews__score-val">4.9</div>
+          <div class="reviews__score-stars" aria-hidden="true">★★★★★</div>
+          <div class="reviews__score-count">на основі 2 400+ відгуків</div>
+        </div>
+      </div>
+
+      <div class="reviews__grid">
+
+        <!-- Відгук 1 -->
+        <article class="review-card" itemscope itemtype="https://schema.org/Review">
+          <div class="review-card__stars" aria-label="5 зірок" aria-hidden="true">★★★★★</div>
+          <p class="review-card__text" itemprop="reviewBody">
+            "Замовила фотоальбом на День народження мами — вона була
+            в сльозах від щастя. Якість поліграфії на рівні преміум-видань."
+          </p>
+          <div class="review-card__footer">
+            <!-- Аватар: замінити src на реальне фото або видалити img -->
+            <div class="review-card__avatar">
+              <img src="./img/avatar/avatar-1.jpg" alt="Олена Коваленко" loading="lazy" width="40" height="40">
+            </div>
+            <div itemprop="author" itemscope itemtype="https://schema.org/Person">
+              <div class="review-card__name" itemprop="name">Олена Коваленко</div>
+              <div class="review-card__city">Київ</div>
+            </div>
+            <div class="review-card__verified" aria-label="Підтверджений відгук">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+              </svg>
+              Підтверджено
+            </div>
+          </div>
+        </article>
+
+        <!-- Відгук 2 -->
+        <article class="review-card" itemscope itemtype="https://schema.org/Review">
+          <div class="review-card__stars" aria-hidden="true">★★★★★</div>
+          <p class="review-card__text" itemprop="reviewBody">
+            "Друкував футболки для всієї команди — 20 штук. Всі вийшли
+            ідеальними, кольори яскраві, тканина м'яка. Дуже задоволений!"
+          </p>
+          <div class="review-card__footer">
+            <div class="review-card__avatar">
+              <img src="./img/avatar/avatar-2.jpg" alt="Максим Бондаренко" loading="lazy" width="40" height="40">
+            </div>
+            <div itemprop="author" itemscope itemtype="https://schema.org/Person">
+              <div class="review-card__name" itemprop="name">Максим Бондаренко</div>
+              <div class="review-card__city">Дніпро</div>
+            </div>
+            <div class="review-card__verified" aria-label="Підтверджений відгук">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+              </svg>
+              Підтверджено
+            </div>
+          </div>
+        </article>
+
+        <!-- Відгук 3 -->
+        <article class="review-card" itemscope itemtype="https://schema.org/Review">
+          <div class="review-card__stars" aria-hidden="true">★★★★★</div>
+          <p class="review-card__text" itemprop="reviewBody">
+            "Замовляю вже вчетверте — кожен раз бездоганна якість та швидка
+            доставка. Кружки з фото — ідеальний подарунок для рідних."
+          </p>
+          <div class="review-card__footer">
+            <div class="review-card__avatar">
+              <img src="./img/avatar/avatar-3.jpg" alt="Тетяна Мельник" loading="lazy" width="40" height="40">
+            </div>
+            <div itemprop="author" itemscope itemtype="https://schema.org/Person">
+              <div class="review-card__name" itemprop="name">Тетяна Мельник</div>
+              <div class="review-card__city">Харків</div>
+            </div>
+            <div class="review-card__verified" aria-label="Підтверджений відгук">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+              </svg>
+              Підтверджено
+            </div>
+          </div>
+        </article>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ================================================
+       ФУТЕР
+  ================================================ -->
+
+  <footer class="footer" role="contentinfo">
+
+    <div class="footer__top">
+      <div class="container">
+
+        <!-- Колонка 1: Бренд -->
+        <div class="footer__brand">
+
+          <div class="footer__brand-logo">
+            <!-- Замінити src на свій файл -->
+            <img src="./img/logo-white.png" alt="PrintMag" width="120" height="36">
+          </div>
+
+          <p class="footer__brand-desc">
+            Якісний фотодрук в Україні. Перетворюємо ваші спогади
+            на унікальні вироби та подарунки з 2018 року.
+          </p>
+
+          <div class="footer__contact">
+            <span class="footer__contact-label">Телефон</span>
+            <a href="tel:+380686885898" class="footer__contact-val">(068) 688-58-98</a>
+          </div>
+
+          <div class="footer__contact">
+            <span class="footer__contact-label">Email</span>
+            <a href="mailto:info@printmag.ua" class="footer__contact-val">info@printmag.ua</a>
+          </div>
+
+          <div class="footer__socials">
+
+            <a href="https://instagram.com/printmag_ua" class="footer__social" aria-label="Instagram PrintMag" rel="noopener" target="_blank">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+              </svg>
+            </a>
+
+            <a href="https://facebook.com/printmag.com.ua" class="footer__social" aria-label="Facebook PrintMag" rel="noopener" target="_blank">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+              </svg>
+            </a>
+
+            <a href="https://t.me/printmag_ua" class="footer__social" aria-label="Telegram PrintMag" rel="noopener" target="_blank">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.96 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/>
+              </svg>
+            </a>
+
+          </div>
+
+        </div>
+
+        <!-- Колонка 2: Сервіси -->
+        <div class="footer__col">
+          <div class="footer__col-title">Сервіси</div>
+          <nav aria-label="Сервіси">
+            <div class="footer__col-links">
+              <a href="/service/tshirt">Друк на футболці</a>
+              <a href="/service/mug">Друк на кружці</a>
+              <a href="/service/puzzle">Фотопазли</a>
+              <a href="/service/album">Фотоальбоми</a>
+              <a href="/service/souvenir">Сувеніри</a>
+            </div>
+          </nav>
+        </div>
+
+        <!-- Колонка 3: Інформація -->
+        <div class="footer__col">
+          <div class="footer__col-title">Інформація</div>
+          <nav aria-label="Інформація">
+            <div class="footer__col-links">
+              <a href="/prices">Ціни</a>
+              <a href="/delivery">Доставка</a>
+              <a href="/requirements">Вимоги до файлів</a>
+              <a href="/faq">FAQ</a>
+              <a href="/about">Про нас</a>
+            </div>
+          </nav>
+        </div>
+
+        <!-- Колонка 4: Акаунт -->
+        <div class="footer__col">
+          <div class="footer__col-title">Акаунт</div>
+          <nav aria-label="Акаунт">
+            <div class="footer__col-links">
+              <a href="/login">Увійти</a>
+              <a href="/register">Реєстрація</a>
+              <a href="/orders">Мої замовлення</a>
+              <a href="/settings">Налаштування</a>
+              <a href="/support">Підтримка</a>
+            </div>
+          </nav>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="footer__bottom">
+      <div class="container">
+        <span class="footer__copy">© 2025 PrintMag Ukraine. Всі права захищені.</span>
+        <div class="footer__bottom-links">
+          <a href="/privacy">Політика конфіденційності</a>
+          <a href="/terms">Умови використання</a>
+          <a href="/oferta">Публічна оферта</a>
+        </div>
+      </div>
+    </div>
+
+  </footer>
+
+
+</body>
+</html>
